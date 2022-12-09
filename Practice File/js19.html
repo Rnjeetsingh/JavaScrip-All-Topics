@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- clearInterval(); -->
+
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+</body>
+</html>
+<script>
+    var data;
+    function start(){
+      data =  setTimeout(function(){
+         document.write("<h1>"+"Ranjeet Singh"+"<h1>")
+       },1000) 
+    }
+    function stop(){
+        clearTimeout(data);
+        alert("Stop")
+    }
+</script>

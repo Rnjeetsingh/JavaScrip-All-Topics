@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #aast{
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    cursor: pointer;
+    transition: 2s;
+}
+    </style>
+</head>
+<body>
+    <!-- Modify css using JavaScript -->
+
+    <h1  id="aast" onmouseenter="enter()" onmouseleave="leav()">Ranjeet Singh</h1>
+</body>
+</html>
+
+<script>
+    // Modify css using javaScript
+
+function enter(){
+    let d = document.getElementById("aast");
+    d.innerText = "Aastha Mishra"
+    d.style.fontFamily = "Vardana";
+    d.style.color = "blue";
+    d.style.fontSize = "100px";
+
+}
+
+function leav(){
+    let d = document.getElementById("aast");
+    d.innerText = "Ranjeet Singh"
+    d.style.fontFamily = "";
+    d.style.color = "red";
+    d.style.fontSize = "";
+
+}
+</script>

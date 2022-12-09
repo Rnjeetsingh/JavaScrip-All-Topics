@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- data Method -->
+
+ <h1 id="ran"></h1>
+<button onclick="dater()">DATE</button>
+<button onclick="year()">YEAR</button>
+<button onclick="month()">MONTH</button>
+<button onclick="hou()">HOURS</button>
+<button onclick="todat()">ToDate</button>
+<button onclick="min()">MINUTS</button>
+<button onclick="sec()">SECONDS</button>
+<button onclick="mill()">MILLISECONDS</button>
+<button onclick="tim()">TIME</button>
+<button onclick="daye()">DAY</button> 
+</body>
+</html>
+
+<script>
+    // Date Method
+
+
+var date = new Date();
+
+function dater(){
+document.getElementById("ran").innerText = date;
+}
+
+function year(){
+document.getElementById("ran").innerText = date.getFullYear();
+}
+
+function month(){
+ var mont = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+document.getElementById("ran").innerText = mont[date.getMonth()];
+}
+
+
+function hou(){
+document.getElementById("ran").innerText = date.getHours();
+}
+
+function todat(){
+document.getElementById("ran").innerText = date.getDate();
+}
+
+function min(){
+document.getElementById("ran").innerText = date.getMinutes();
+}
+
+function mill(){
+document.getElementById("ran").innerText = date.getMilliseconds();
+}
+
+function sec(){
+document.getElementById("ran").innerText = date.getSeconds();
+}
+
+function tim(){
+document.getElementById("ran").innerText = date.getTime();
+}
+
+function daye(){
+ let dai = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+document.getElementById("ran").innerText = dai[date.getDay()];
+}
+</script>

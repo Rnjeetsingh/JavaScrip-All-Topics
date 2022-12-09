@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Using Prompt function -->
+
+    Name: <span id="name"></span><br>
+    
+    Get Your Name<button onclick="call()">Click</button>
+
+</body>
+</html>
+
+<script>
+    // Prompt Function 
+
+function call(){
+    let result = prompt("Please Enter Your Name!","");
+    let data = document.getElementById("name")
+    data.innerText = result;
+}
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ranj{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: verdana;
+    color: coral;
+}
+    </style>
+</head>
+<body onload="showTime()">
+    <!-- Real Time Clock projects -->
+
+     <h1 id="ranj"></h1> 
+</body>
+</html>
+
+<script>
+    // Real Time Clock Project
+
+function showTime(){
+    var d = new Date();
+    var h = d.getHours();
+    var min = d.getMinutes();
+    var sec = d.getSeconds();
+    let set = h >= 12 ? "PM" : "AM";
+    
+    if(h>12){
+        h = h - 12;
+    }
+   
+
+    h = h<10 ? "0"+h : h;
+    min = min<10 ? "0"+min : min;
+    sec = sec<10 ? "0"+sec : sec;
+
+    var res = (h+":"+min+":"+sec+" "+set);
+    document.getElementById("ranj").innerText = res;
+    setTimeout(showTime,1000);
+}
+</script>

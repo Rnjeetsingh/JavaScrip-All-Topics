@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- push or pop or slice or reverse or shift-->
+
+      <h1 id="ran"></h1>
+<button onclick="pus()">PUSH</button>
+<button onclick="popr()">POP</button>
+<button onclick="slicer()">SLICE</button>
+<button onclick="rever()">REVERSE</button>
+<button onclick="shif()">SHIFT</button>
+</body>
+</html>
+
+<script>
+    // Method List ;
+
+// 1.push();
+// 2.pop();
+// 3.slice();
+// 4.reverse();
+// 5.shift();
+
+var arr = ["Ram", "Shyam", "Kamla", "Anup", "Ravi"];
+var newarr = document.getElementById("ran").innerText = arr;
+
+function pus(){
+  let send = prompt("Please Enter Your Name");
+  newarr.push(send);
+  document.getElementById("ran").innerText = newarr
+}
+
+
+function popr(){
+  newarr.pop();
+  document.getElementById("ran").innerText = newarr
+}
+
+function slicer(){
+  let send = prompt("Please Enter The Number")
+  var sliarr = newarr.slice(send);
+  document.getElementById("ran").innerText = sliarr;
+}
+
+function rever(){
+   let res = newarr.reverse();
+   document.getElementById("ran").innerText = res;
+}
+
+function shif(){
+   let res = newarr.shift();
+   document.getElementById("ran").innerText = res;
+}
+</script>

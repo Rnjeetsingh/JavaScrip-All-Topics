@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Get User Name -->
+
+<h1 id="Ran" style="margin: auto;"></h1>
+<input type="text" id="Ranj" placeholder="Please Enter UeserName">
+<button onclick="getname()">Submit</button>
+ <h1 class="Aasth"></h1>    
+</body>
+</html>
+<script>
+        function getname(){
+        var value = document.getElementById("Ranj").value;
+        var newvalue = document.getElementsByClassName("Aasth")[0];
+        newvalue.innerText = value
+    }
+</script>

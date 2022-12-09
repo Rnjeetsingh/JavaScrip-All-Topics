@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Calculater code -->
+
+ <input type="number" name="number" id="first" placeholder="EnterNumber" step="any" />
+ <select name="operation" id="opera" >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+ </select>
+ <input type="number" name="number" id="second" placeholder="EnterNumber" step="any" /> <br>
+ <button onclick="cal()">Calculate</button>
+ <input type="text"  id="result" readonly="" />
+</body>
+</html>
+<script>
+function cal(){
+    let valuefirst = document.getElementById("first").value;
+    let valueSecond = document.getElementById("second").value;
+    let  selc = document.getElementById("opera").value;
+    
+    let finalval;
+    
+    if(selc == "+"){
+         finalval = parseInt(valuefirst) + parseInt(valueSecond);
+        
+    }
+    if(selc == "-"){
+         finalval = parseInt(valuefirst) - parseInt(valueSecond);
+        
+    }
+    if(selc == "*"){
+         finalval = parseInt(valuefirst) * parseInt(valueSecond);
+        
+    }
+    if(selc == "/"){
+         finalval = parseInt(valuefirst) / parseInt(valueSecond);
+        
+    
+    }
+    document.getElementById("result").value = finalval;
+     
+}
+</script>

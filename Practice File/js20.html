@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="ranj"></h1>
+    <button onclick="stop()">STOP</button>
+</body>
+</html>
+
+<script>
+ var data = setInterval(count,1000);
+ var c = 0;
+ function count(){
+ document.getElementById("ranj").innerText = c;
+ c++;
+ }
+
+ function stop(){
+    clearInterval(data);
+ }
+</script>

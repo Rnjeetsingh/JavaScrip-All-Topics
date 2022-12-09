@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- setInterval and setTimeout -->
+
+<h1 id="ran"></h1>
+<button onclick="set()">GetName</button>
+<button onclick="setr()">GetName</button>
+</body>
+</html>
+
+<script>
+//  setInterval();
+
+
+function set(){
+    setInterval(function(){
+        
+        document.write("<h1>"+"Ranjeet"+"</h1>")
+        
+    },
+    1000
+    )
+}
+
+// setTimeout();
+
+function setr(){
+    setTimeout(function(){
+        document.write("<h1>"+"Ranjeet Aastha"+"</h1>")
+    },
+    2000
+    )
+}
+</script>
