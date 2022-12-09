@@ -328,6 +328,58 @@ clearInterval method
 
 
 
+DOM (Document Object Modle) In JavaScript.
+
+Open and close a new window using JavaScript Window DOM | Open() and Close().
+
+
+///////////////////////////////////////////////////////////////////////
+
+History Object In javaScript.
+
+1.The history object contains the URLs visited by the user (within a browser window).
+2.The  history object is part of the  window object and is accessed through the window history property.
+3.All the major browser supports it .
+
+1.back() => Loads the previous URL in the history list 
+syntax: window.history.back();
+
+2.forward() => Loads the next URL in the history list.
+syntax: window.history.forword();
+
+3.go() => Loads a specific URL from the history list.
+syntax: window.history.go();
+
+///////////////////////////////////////////////////////////////////////
+
+Window screen object in JavaScript.
+
+1.availHeight => Return the height of the screen (excluding the windows Taskbar).
+Syntax: screen.availHeight;
+
+2.avilWidth => Returns the width of the screen (excluding the windows Taskbar).
+Syntax: screenavailWidth;
+
+3.colorDepth => Returns the bit depth of the color palette for displaying.
+Syntax: screen.colorDepth;
+
+4.height => Return the total height of the screen.
+Syntax: screen.height;
+
+5.pixelDepth => Returns the color resolutin (in bits per pixel) of the screen.
+Syntax: screen.pixelDepth;
+
+6.width => Returns the total width of the screen.
+Syntax: screen.width;
+
+///////////////////////////////////////////////////////////////////////
+
+Math object
+
+1.The math object contains some predefined mathematical methods.
+2.These methods are used to perform mathematical calculation on numerical values.
+3.To access these methods Math.keyword is used.
+
 
 
 
