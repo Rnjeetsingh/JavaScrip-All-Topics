@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let user = ["Ranjeet",21,"Bhiwandi",["Male",2000]]
+
+    let [name,age = 18,city,[gender,amount]] = user;
+
+    console.log(name)
+    console.log(age)
+    console.log(city)
+    console.log(gender)
+    console.log(amount)
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    let call = ([nam,ag,cit]) => {
+        console.log(nam) 
+        console.log(ag)
+        console.log(cit)
+    }
+
+    call(["Aastha",22,"Varansi"]);
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    let show = () => {
+        return ["Aastha Mishra",22,"Ayodhya"]
+    }
+
+    let [n,a,l] = show();
+    console.log(n,a,l)
+
+</script>
