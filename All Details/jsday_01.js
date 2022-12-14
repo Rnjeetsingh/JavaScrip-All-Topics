@@ -487,3 +487,53 @@
 // }
 
 ///////////////////////////////////////////////////////////////////////////////////
+
+// Math Object 
+
+// var rou = Math.round(3.6);
+//     document.write("<h1>"+rou+"</h1"+"<br>");
+
+//     var pow = Math.pow(2,4);
+//     document.write("<h1>"+pow+"</h1"+"<br>");
+
+//     var sqr = Math.sqrt(64);
+//     document.write("<h1>"+sqr+"</h1"+"<br>");
+
+//     var ab = Math.abs(-10);
+//     document.write("<h1>"+ab+"</h1"+"<br>");    
+
+//     var cil = Math.ceil(3.5);
+//     document.write("<h1>"+cil+"</h1"+"<br>");  
+        
+//     var flor = Math.floor(3.6);
+//     document.write("<h1>"+flor+"</h1"+"<br>");   
+        
+//     var min = Math.min(8,6,9,2,3,4,7,);
+//     document.write("<h1>"+min+"</h1"+"<br>");    
+
+//     var max = Math.max(6,5,4,8,8,9,7,4,4,5,);
+//     document.write("<h1>"+max+"</h1"+"<br>");
+
+//     var rand = Math.floor(Math.random()*10000)    
+//     document.write("<h1>"+rand+"</h1"+"<br>");
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// this keyboard
+
+// function remove(elem){
+//     elem.style.display = "none";
+//    }
+//      let obj = {
+//         first:"Ranjeet",
+//         last:"Singh",
+//         fullname:function(){
+//             var fname = this.first+this.last;
+//            return fname;
+//         }
+//      }
+
+//      document.write("<h1>"+obj.fullname() )
+
+//   var the = this;
+//   document.write("<h1>"+the);

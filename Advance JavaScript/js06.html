@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let name = "Ranjeet";
+    let age = 21;
+    let classe = "Web Devloper";
+    let date = "14-12-2022"
+
+    let obj = {
+        name,
+        age,
+        classe,
+        date,
+    };
+
+    document.write(`<h1> ${obj.name}`);
+        console.log(obj)
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        let n = "name";
+        let m = "full";
+
+        let obj2 = {
+            [n] : "Ranjeet Singh",
+            [m + "name"] : "Ranjeet Sanjay Singh",
+            details:function(){
+                return `${this.name} ${this.fullname}`;
+            }
+        };
+
+        console.log(obj2);
+        console.log(obj2.details());
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+           
+        let obj3 = {
+            name : "Aastha",
+            last : "Mishra",
+            call (){
+                return `${this.name} ${this.last}`;
+            }
+        }
+        console.log(obj3['call']());
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       let namer = "Ranjeet";
+       let lastr = "Singh";
+       let ager  = "21";
+
+       let student = (n, l, a) => {
+        fullname = n + " " + l;
+        return {fullname,a};
+       }
+       let s = student(namer,lastr,ager)
+       document.write("</br>"+s.fullname,s.a);
+
+</script>

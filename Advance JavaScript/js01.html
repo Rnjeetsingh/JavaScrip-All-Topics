@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between const , var, let</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+ var a = "Ranjeet";
+ var a = "Singh";
+  a = "Aastha";
+ document.write("<h1>"+a);
+    
+
+ let  b = "Ranjeet";
+//  let  b = "Singh"; Not Be Redeclear.
+   b = "Aastha";
+ document.write("<h1>"+b);
+
+    const c = "Ranjeet";
+//  const c = "Singh"; Not Be Redeclear.
+//   c = "Aastha"; Not Be Reassigne Value.
+ document.write("<h1>"+c);
+
+    if(1 == 1){
+        var aa = "Ranjeet";
+    }
+    document.write("<h1>"+aa);
+   
+
+        if(2 == 2){
+        let  bb = "Ranjeet";
+    }
+    // document.write("<h1>"+bb); bb is  Not defined.
+
+
+    if(3 == 3){
+    const  cc = "Ranjeet";
+    }
+    // document.write("<h1>"+cc);  cc is Not defined.
+
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let sum = (name,cours, ...arr) => {
+
+        document.write(`<h1> ${name} ${cours} :`)
+
+            let sum = 0;
+
+            for(let i in arr){
+                sum+=arr[i];
+            }
+            document.write(`${sum} </br>`);
+
+    }
+
+    let arr = [20,60,88,90,74,85,96,55];
+    let n = "Ranjeet Singh";
+    let c = "Computer Science";
+    sum(n,c, ...arr);
+ 
+    //////////////////////////////////////////////////////////
+
+    let arr1 = [1,2,3,4,5,6,7,8,9];
+    let newarr = [...arr1];
+    arr1.push(60,60,60)
+    console.log(arr1)
+    console.log(newarr)
+
+    //////////////////////////////////////////////////////////
+
+    let arr3 = [22,33,66,44];
+    let arr4 = [22,33,66,44];
+    let com = [...arr3,...arr4];
+    console.log(com);
+
+    //////////////////////////////////////////////////////////
+
+    let obj1 = {
+        Name : "Ranjeet",
+    };
+
+    let obj2 = {
+        LastName : "Singh",
+    };
+
+    let newobj = {...obj1, ...obj2};
+
+    console.log(newobj);
+   
+  
+</script>
