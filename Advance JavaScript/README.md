@@ -138,7 +138,83 @@ Syntax: let user = {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
    
+What is OOP
 
+Object Oriented Programming.
+
+syntax:  class hello{
+                 message(){
+                    console.log("Hello Everyone");
+                     }
+                   }
+              let a = new hello();
+                  a.message();
+ 
+
+Type of Methods:
+
+1.Constructor:
+Syntax: constructor(){
+              console.log("Hello World");
+              }
+2.Prototype
+Syntax: message(){
+           console.log("Hello World")
+              }
+3.Static
+Syntax:  static name(){
+              console.log("Hello World")
+             }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+What is Inheritance.
+
+Syntax:  clas fruits{
+                   //Properties & Method;
+                }
+
+           class vegetables extends fruits{
+                                  //Properties & Method;
+                                 }
+
+             let f = new fruits();
+             let v = new vegetables();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+What is Modules.
+
+1.File1.js
+
+export let name = "Yahoo Baba";
+
+export function hello{
+              }
+
+export class user{
+            }
+
+2.File2.js
+
+import {name} from './File1.js'
+
+
+import {hello} from './File1.js'
+
+
+import {user} from './File1.js'
+
+console.log(name);
+
+hello();
+
+let a = new user();
+
+<!-- <script type="module" src ="./File2.js"></script> -->
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

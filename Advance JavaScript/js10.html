@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class first{
+        constructor(name){
+            console.log("My Name Is"+name);
+        }
+    }
+
+    class second extends first{
+        constructor(name){
+            super();
+            console.log("My Name Is"+name);
+        }
+    }
+    let a = new second("Ranjeet");
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    class employe{
+        constructor(name,age,salery){
+            this.empname = name,
+            this.empage = age,
+            this.empsalery = salery
+
+            console.log("constructor: employes")
+        }
+        info(){
+            document.write(`<h1>Employe Class </h1> 
+                           Name: ${this.empname} <br> 
+                           Age: ${this.empage} <br>
+                           Salery: ${this.empsalery} <br>`);
+            
+        }
+    }
+
+    class maneger extends employe{
+        info(){
+            
+            let ta = 3000;
+            let pa = 1000;
+            let totalSalery = (this.empsalery + ta + pa);
+            document.write(`<h1>Manegr Class </h1> 
+                           Name: ${this.empname} <br> 
+                           Age: ${this.empage} <br>
+                           Salery: ${totalSalery} <br>`);
+                           
+        }
+    }
+    
+    let emplos = new employe("Ranjeet",21,50000);
+   let mang = new maneger("Aastha",22,45000);
+   emplos.info();
+   mang.info();
+   
+</script>

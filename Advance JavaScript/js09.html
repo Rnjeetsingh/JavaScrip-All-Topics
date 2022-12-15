@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OOP</title>
 </head>
 <body>
     
@@ -12,6 +12,46 @@
 </html>
 
 <script>
+ 
+    class hello{
+        message(){
+            console.log("Hello World");
+        }
+        sorry(){
+            console.log("Sorry Everyone");
+        }
+    }
 
+    let a = new hello();
+    a.message();
+    a.sorry();
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+
+    class student{
+
+        constructor(name,age,city){
+            this.studentname = name,
+            this.studentage = age,
+            this.studentcity = city
+            
+        };
+         
+        hello(){
+            document.write(`My Name is ${this.studentname} I'm ${this.studentage} Years old I from ${this.studentcity}`);
+        }
+
+        static call(){
+            document.write(`My Name is Ranjeet Singh`);
+        }
+
+    }
+
+    let data = new student("Ranjet", 21, "Bhiwandi");
+    let newdata = new student("Aastha",22,"Varansi");
+      data.hello();
+      newdata.hello();
+      student.call();
     
 </script>
