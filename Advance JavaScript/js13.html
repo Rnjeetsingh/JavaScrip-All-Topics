@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let p1 = new Promise ((resolve,reject) => {
+        setTimeout(() => {
+         console.log("Promises One Resolve")
+             resolve(20);
+        },1 * 1000)
+    })
+
+    let p2 = new Promise ((resolve,reject) => {
+        setTimeout (() => {
+            console.log("Promises Second Resolve")
+            resolve(30);
+        },2 * 1000)
+    })
+
+    let p3 = new Promise ((resolve,reject) => {
+        setTimeout (() => {
+            console.log("Promises Thired Resolve")
+            resolve(40);
+        },3 * 1000)
+    })
+       let total = 0;
+    Promise.all([p1,p2,p3]).then((result) => {
+        for(var i in result){
+            total+=result[i];
+        }
+        console.log(`Result : ${result}`);
+        console.log(`Total : ${total}`);
+    }).catch((error) => {
+        console.log(error);
+    })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let sunny = (values,message) => {
+    return (resolve, reject) => {
+        setTimeout (() => {
+            console.log(`My Name is ${message}`)
+            resolve(values)
+        },values * 100)
+    }
+}
+
+let a1 = new Promise(sunny(10,"RanjeetSingh"));
+let a2 = new Promise(sunny(20,"AasthaMishra"));
+let a3 = new Promise(sunny(30,"RavindraYadav"));
+
+var sum = 0;
+Promise.all([a1,a2,a3]).then((result) =>{
+    console.log(result)
+    for(var i in result){
+        sum+=result[i];
+    }
+      console.log(`Total : ${sum}`)
+}).catch(() => {
+    console.log(error);
+})
+
+
+</script>

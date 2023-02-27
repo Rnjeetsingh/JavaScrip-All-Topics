@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings And Strings Functions</title>
+</head>
+
+<body>
+    <h1 id="Ranjs"></h1>
+    
+    <Script>
+
+        // Strings 
+
+        let name = "Ranjeet Singh";
+        let age = "Twenty One"
+        // console.log(name + age);
+
+
+        // Templet Litral
+        let temp = ` Name is ${name} And Age is ${age}`;
+        // console.log(temp);
+
+        let length = name.length;
+        // console.log(length)
+
+        // document.getElementById('Ranjs').innerHTML = "<h3>My Name Is Ranjeet Singh</h3>"
+    </Script>
+
+    <script>
+        // Strings Function
+
+        let nam = "Ranjeet Singh";
+        let position = nam.indexOf("t");
+        let last_position = nam.lastIndexOf("n");
+        // console.log(position);
+        // console.log(last_position);
+
+        let substr = nam.slice(0,7);
+        let substr1 = nam.substring(0,7);
+        let substr2 = nam.substr(1,2);
+        // console.log(substr);
+        // console.log(substr1);
+        // console.log(substr2);
+
+        let replaced = nam.replace("Ranjeet","Aastha");
+        // console.log(replaced);
+
+        let uppercase = nam.toUpperCase();
+        let lowercase = nam.toLowerCase();
+        // console.log(uppercase);
+        // console.log(lowercase);
+         
+        let concat = nam.concat(" Aastha Mishra")
+        // console.log(concat);
+        
+        let space = "  Ranjeet  Singh  ";
+        let removspace = space.trim();
+        // console.log(removspace);
+
+        let char = nam.charAt(2);
+        // console.log(char);
+
+    </script>
+    
+</body>
+</html>

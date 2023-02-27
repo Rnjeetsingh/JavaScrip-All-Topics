@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For, While, ForEach , Do While loops</title>
+</head>
+<body>
+    
+    <script>
+
+        // For Loops
+        for(let i = 0; i<10; i++){
+            // console.log("Namste World");
+        }
+
+        // Print 5 Table
+         for(let i = 5; i<51; i=i+5){
+            // console.log(i);
+         }
+
+        //  Reverse the 5 Table
+        for(let i = 50; i>4; i=i-5){
+            // console.log(i);
+        }
+
+        // Find Odd Num 1 to 10
+        for(let i = 1; i<=10; i++){
+            if(i%2 != 0){
+                // console.log(i);
+            }
+        }
+
+        // Find Even Num 1 to 10
+        for(let i = 1; i<=10; i++){
+            if(i%2 == 0){
+                // console.log(i);
+            }
+        }
+
+
+        // While Loops
+        let i = 1;
+        while(i<10){
+            // console.log("Namste India");
+            i++;
+        }
+
+        let j = 10;
+        while(j>0){
+            // console.log(j);
+            j--;
+        }
+
+        // Do While Loops
+        let k = 1;
+        do{
+        //   console.log(k);
+          k++;
+        }
+        while(k<10)
+
+
+        // For...In Loop
+        // In Object
+        let name = {
+            nam:"Ranjeet",
+            age:"22",
+            mob:"9370983954",
+            address:"Bhiwandi, Thane"
+        }
+
+        for(let key in name){
+            // console.log(key+ ":" +name[key]);
+        }
+
+        // In Arrays
+        let data = ["Raju","Aman","Rahul","Dev","Sonu"];
+        
+        for(let index in data){
+            // console.log(index+":"+data[index]);
+        }
+
+        // for of
+        for(element of data){
+            // console.log(element);
+        }
+
+        // forEach
+        data.forEach( myfunction = (element) => {
+            // console.log(element);
+        })
+
+    </script>
+</body>
+</html>
