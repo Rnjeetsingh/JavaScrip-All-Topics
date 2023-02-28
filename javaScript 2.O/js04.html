@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For, While, ForEach , Do While loops</title>
+    <title>For, While, ForEach , Do While loops, Map, Filter, Reduce</title>
 </head>
 <body>
     
@@ -39,6 +39,7 @@
             }
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////
 
         // While Loops
         let i = 1;
@@ -53,6 +54,8 @@
             j--;
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////
+
         // Do While Loops
         let k = 1;
         do{
@@ -61,6 +64,7 @@
         }
         while(k<10)
 
+        ///////////////////////////////////////////////////////////////////////////////////
 
         // For...In Loop
         // In Object
@@ -82,15 +86,48 @@
             // console.log(index+":"+data[index]);
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////
+
         // for of
         for(element of data){
             // console.log(element);
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////
+
         // forEach
         data.forEach( myfunction = (element) => {
             // console.log(element);
         })
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        // map() => Create a new array by performing some opretion on each array element.
+
+        let arr = [43, 33, 65, 43];
+
+        let a = arr.map((element, index , array) => {
+            // console.log(element, index , array)
+        })
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        let arr2 = [6, 33, 22 , 32, 44, 23, 67, 43, 39];
+
+        let b = arr2.filter((e) => {
+            return (e<50);
+        })
+        // console.log(b);
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        let arr3 = [5, 3, 5, 4, 3, 6, 4];
+       
+        let c = arr3.reduce((e1, e2) => {
+            return (e1 + e2);
+        })
+        // console.log(c);
+
 
     </script>
 </body>

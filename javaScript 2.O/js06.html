@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions, Arrow Function</title>
+</head>
+<body>
+    <Script>
+        // Functions
+        function calculat(x, y) {
+          return (1 + (x + y) /2)
+        }
+
+         let a = 5;
+         let b = 10;
+         let c = 9;
+        // console.log("Answer is "+" "+ calculat(a,b))
+        // console.log("Answer is "+" "+ calculat(b,c))
+        // console.log("Answer is "+" "+ calculat(c,a))
+
+        function stringData(){
+            console.log("My name is Ranjeet Singh I'm WebDevloper");
+        }
+
+        stringData();
+
+
+
+       ///////////////////////////////////////////////////////////////////////////////////
+
+        // Arrow Function
+
+        const sayHello = () => {
+            // console.log("Hello Ranjeet")
+        }
+        sayHello();
+
+        const sayGo = () => { console.log("Go Ranjeet")}
+      // sayGo();
+
+        const sayNo = () => console.log("No Ranjeet")
+        // sayNo()
+
+        const sayCome = name => console.log("Name"+" "+name)
+        // sayCome("Ranjeet")
+
+        const sayRun = (name,age) => console.log(name +" "+age)
+        // sayRun("Ranjeet", 22);
+
+        let data = {
+            name:"Ranjeet Singh",
+            age:"22",
+            Address:"Bhiwandi, Bhadwad",
+            getData:function () {
+                console.log(`Name:${this.name} Age:${this.age} Address:${this.Address}`)
+            },
+           showData:function () {
+                 setTimeout(() => {
+                    console.log(`Name:${this.name} Age:${this.age} Address:${this.Address}`)
+                 }, 5000);
+           }
+        }
+        // data.getData();
+        // data.showData()
+    </Script>
+</body>
+</html>
