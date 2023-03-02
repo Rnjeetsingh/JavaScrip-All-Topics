@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manupulation</title>
+</head>
+<body>
+   
+    <h1 id="num">Dom Manupulation ID</h1>
+    <h1 class="num2">Dom Manupulation Class</h1>
+    <h1 class="num2">Dom Manupulation Class</h1>
+
+    <div id="parent">
+        <h1 id="ch-1">This is Child ID</h1>
+        <h1 class="ch-2">This is Child Class</h1>
+    </div>
+
+    <div id="content"></div>
+
+     <button id="even">Click Me</button>
+
+      
+     <button id="btn">Get Data From API'S</button>
+     <div id="root">
+
+     </div>
+
+
+    <!-- Document Object Module -->
+    <script>
+        // window.console.log(window);
+        // window.alert("I will see you")
+        document.body.style.background = "pink"
+
+     ///////////////////////////////////////////////////////////////////////////////////
+
+    //   1.getElementById
+    const data1 = document.getElementById('num');
+    // console.log(data1);
+
+    //   2.getElementsByClassName
+    const data2 = document.getElementsByClassName('num2');
+    // console.log(data2);
+
+    //   3.getElementsByTagName
+    const data3 = document.getElementsByTagName('h1');
+    // console.log(data3)
+
+    //   4.querySelector
+    const data4 = document.querySelector('#num');
+    // console.log(data4)
+
+     //   1.querySelectorAll
+     const data5 = document.querySelectorAll('.num');
+    // console.log(data5)
+
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    // Traverse DOM
+
+    // 1.parentNode
+        const parent1 = document.querySelector('.ch-2');
+         const parnetData = parent1.parentNode;
+        //  console.log(parnetData);
+
+    // 2.childNodes
+        const child1 = document.querySelector('#parent');
+        const childData = child1.childNodes;
+        // console.log(childData);
+
+    //  3.nextElementSibling     
+        const sibling = document.querySelector('#ch-1');
+        const siblingData = sibling.nextElementSibling
+        // console.log(siblingData)
+
+
+    //  3.previousElementSibling     
+        const sibling2 = document.querySelector('.ch-2');
+        const siblingData2 = sibling2.previousElementSibling
+        // console.log(siblingData2)
+
+
+     ///////////////////////////////////////////////////////////////////////////////////
+
+    //  Manipulation
+
+     const chageData = document.querySelector('#num');
+     chageData.innerHTML = "I Can Change the data Dom Manipulation";
+     chageData.style.color = "blue"
+
+     const addHtml = document.createElement('h1');
+     addHtml.classList.add('card');
+     addHtml.innerHTML = "I Succesfully Created Element";
+     const getElem = document.querySelector('#content');
+          getElem.appendChild(addHtml)
+
+    ///////////////////////////////////////////////////////////////////////////////////      
+
+
+    // DOM Events
+    const even = document.querySelector('#even');
+    const newData = document.querySelector('#content');
+    even.addEventListener('click', (event) => {
+        newData.innerHTML = "Ranjeet Singh";
+        newData.style.color = 'purple';
+        newData.style.fontSize = '60px'
+    })
+
+
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    // API'S = https://jsonplaceholder.typicode.com/photos
+
+
+    const root = document.querySelector('#root');
+    const button = document.querySelector('#btn');
+
+
+    //When this function will be run sipley this function creat a div inside div create
+    // One imgae and one title and then append inside the root div . => 4
+    function creatItems(items){
+        const div = document.createElement('div');
+        div.classList.add('parentCard');
+
+        const img = document.createElement('img');
+        img.src = items.url
+
+        const  title = document.createElement('h2');
+        title.innerHTML = items.title;
+
+        div.appendChild(img);
+        div.appendChild(title);
+        root.appendChild(div);
+
+    }
+
+  
+    // When This function will be call then this function will be travers inside the images 
+    // object and then call creatItems function and pass inside this function images single
+    // object data. => 3
+    function displayImage(images) {
+       images.forEach((items) => {
+           creatItems(items)
+       })
+    }
+
+    // When Click On Button Api will fetch and data wil be get: => 1
+
+    button.addEventListener('click', () => {
+
+     fetch(`https://jsonplaceholder.typicode.com/photos`)
+     .then(res => res.json())
+     .then((photos) => {
+        // when data wil be get from api then displayImage function will be call and inside 
+        // this function res parameters will be pass: =>  2
+     displayImage(photos);
+    })
+
+    })
+    
+
+    
+
+    </script>
+    
+</body>
+</html>

@@ -9,8 +9,97 @@
 <body>
 
     <script>
+        //   Object
 
+        let data =  {
+            name: "Ramayan",
+            work: "Tvshows",
+            Top: 10,
+            Add: "Ayodhya"
+        }
+
+        // console.log(data)
+
+
+        // Changing Properties values
+        data.name = "Mahabharat";
+        // console.log(data.name)
+
+
+        // Changing Properties
+        data.email = "Ram@gmail.com";
+        // console.log(data)
         
+
+        // Delete Properties
+        delete data.Add;
+        // console.log(data)
+
+
+        // Run loop in object
+        for(let key in data){
+            // console.log(key+"=>"+data[key]);
+        }
+
+
+        // Array in object
+        let newObj = {
+            firstname:"Ravindra",
+            lastname:"Yadav",
+            language:['html','css','javascript','react']
+        }
+
+        // console.log(newObj.language[2])
+
+        // Obj Inside Object
+        let Obj = {
+            firstname:"Anurag",
+            lastname:"rai",
+            language:['html','css','javascript','react'],
+            intrest:{
+                'game':"Free Fire",
+                'country':"India"
+            }
+        }
+        // console.log(Obj.intrest.game)
+
+
+        // Function Inside Object
+        let Obj2 = {
+            firstname:"Prakash",
+            lastname:"Vanture",
+            language:['html','css','javascript','react'],
+            intrest:{
+                'game':"Free Fire",
+                'country':"India"
+            },
+            salary: function(){
+                return ("7.5 Lpa")
+            },
+            fullName:function(){
+                return (this.firstname+" "+this.lastname)
+            }
+        }
+        // console.log(Obj2.salary());
+        // console.log(Obj2.fullName())
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+
+        // Arrays
+        
+        let marks = [91, 88, 78, 96, 25,null,false,"Not presetn"];
+        console.log(marks);
+        console.log(marks[3])
+        console.log("length of the array"+" "+marks.length)
+        marks[3] = 100;
+        marks[5] = 100;
+        console.log(marks)
+        console.log(typeof (marks));
+        
+
+
     </script>
     
 </body>

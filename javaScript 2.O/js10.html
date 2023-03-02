@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: rgb(29, 109, 141);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            background: #fff;
+            padding: 45px;
+            padding-right: 70px;
+            width: 20%;
+        }
+        input{
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 25px;
+
+        }
+        input[type="submit"]{
+            margin-left: 35%;
+            width: 100px;
+            background: rgb(29, 109, 141);
+            color: #fff;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        h1{
+            margin-left: 35%;
+            color: rgb(29, 109, 141);
+            
+        }
+        .error{
+            margin: 0px;
+            color: red;
+        }
+       
+        
+    </style>
+    <title>Working with Forms</title>
+</head>
+<body>
+    <div id="container">
+      <h1>Login</h1>
+      <form action="" onsubmit="return formValidation()">
+        <p  id="valiuser" class="error"></p>
+      <input type="text" id="username" placeholder="Username" /></br>
+      <p  id="valipass" class="error"></p>
+      <input type="password" id="password" placeholder="Password" /></br>
+      <input type="submit" />
+    </form>
+    </div>
+</body>
+</html>
+
+<script>
+    const username = document.querySelector("#username");
+    const password = document.querySelector("#password");
+   function formValidation(){
+
+    let  flag;
+
+    if(username.value == ""){
+       document.querySelector("#valiuser").innerHTML = "Please Enter Username";
+       flag = 0;
+    }
+    else if(username.value.length < 6){
+        document.querySelector("#valiuser").innerHTML = "Charecter atlest six char"
+        flag = 0;
+    }else{
+        document.querySelector("#valiuser").innerHTML = "";
+        flag = 1;
+    }
+
+    if(password.value == ""){
+       document.querySelector("#valipass").innerHTML = "Please Enter Password";
+       flag = 0;
+    }
+    else if(password.value.length < 8){
+        document.querySelector("#valipass").innerHTML = "Password Enter 8 digit"
+        flag = 0;
+    }else{
+        document.querySelector("#valipass").innerHTML = "";
+        flag = 1;
+    }
+
+    if(flag == 1){
+      return true;
+    }else{
+     return false;
+    }
+  
+  }
+</script>
