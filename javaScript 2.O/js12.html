@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1>Promises</h1>
+    
+</body>
+</html>
+<script>
+
+    // Promises
+
+    let p1 = new Promise((resolve, reject) => {
+          
+        // console.log('Promises is Pending');
+        setTimeout(() => {
+        //   console.log('I am a Promise and Im full filled');
+          resolve(true);
+        // reject(new Error('I am an error'))
+        },5000);
+    })
+
+    let p2 = new Promise((resolve, reject) => {
+          
+        //   console.log('Promises is Pending');
+          setTimeout(() => {
+            // console.log('I am a Promise and Im full rejected');
+        
+          reject(new Error('I am an error'))
+          },5000);
+      })
+
+      p1.then((value) => {
+        // console.log(value);
+      })
+      p2.catch((error) => {
+        // console.log('some error accure in p2');
+      })
+
+
+      ///////////////////////////////////////////////////////////////////////////////////
+
+  let pr1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    //  console.log('Resolve after 2 seconds')
+     resolve(56);
+    }, 2000)
+  })
+
+  pr1.then((value) => {
+    // console.log(value)
+    
+    let pr2 = new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+            resolve('Promise 2')
+
+        },2000)
+    })
+    return pr2
+  }).then((value) => {
+    // console.log('We are done');
+    return 2
+  }).then((value) => {
+    // console.log('Now we are pakka done');
+  })
+
+///////////////////////////////////////////////////////////////////////////////////
+
+//   Promise ES6 Version
+
+const promp = (a,b) => {
+    return (new Promise((resolve, reject) => {
+        // console.log('Featchig data')
+        let c = a/b;
+
+        setTimeout(() => {
+            if(a, b) {
+        resolve(`Your answer ${c}`);
+    }else{
+        reject('Failed to calculate');
+    }
+},5000)
+   
+}));
+
+}
+ 
+
+promp(20,5).then((result) => {
+    // console.log(result);
+}).catch((error) => {
+    // console.log(error);
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// Promise.all
+
+let pa1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // console.log('First party has been Resolved');
+        resolve(10);
+    },2 * 1000)
+})
+
+let pa2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // console.log('Second party has been Resolved');
+        resolve(20);
+    },3 * 1000)
+})
+
+let pa3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // console.log('Third party has been Resolved');
+        resolve(30);
+    },4 * 1000)
+})
+
+let total = 0;
+Promise.all([pa1,pa2, pa3]).then((result) => {
+   
+    for(let i in result){
+        total+=result[i];
+    }
+    // console.log(`Result: ${result}`);
+    // console.log(`Total: ${total}`);
+}).catch((error) => {
+    // console.log(`Error: ${error}`);
+})
+
+
+// Sort Way to use Promise.all 
+
+const sortProm = (value, messg) => {
+
+   return function (resolve, reject){
+        setTimeout(() => {
+            // console.log(`${messg} party has been Resolved`)
+            resolve(value);
+
+        },value * 100)
+    }
+
+}
+
+let ps1 = new Promise(sortProm(10,"First"));
+let ps2 = new Promise(sortProm(20,"Second"));
+let ps3 = new Promise(sortProm(30,"Thired"));
+
+let total2 = 0;
+Promise.all([ps1, ps2, ps3]).then((result) =>{
+    for(let i in result){
+        total2+=result[i];
+    }
+    // console.log(`Total: ${total2}`);
+    // console.log(`Result: ${result}`);
+}).catch((error) => {
+    // console.log(`Error : ${error}`);
+})
+
+
+</script>

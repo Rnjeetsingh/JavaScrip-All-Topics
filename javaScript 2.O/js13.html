@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Feature</title>
+</head>
+<body>
+    <h1>ES6 Feature</h1>
+</body>
+</html>
+
+<script>
+    // Rest Opretor
+    function sum(name,surname, ...rest){
+        let total = 0;
+        // console.log(rest);
+        for(i in rest){
+           total+=rest[i]
+        }   
+        // console.log(name,surname,total)
+    }
+
+    // sum("Ranjeet","Aastha",2,5,5,6);
+    // sum("Singh","Mishra",20,52);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//    Spread Operator
+
+function spre(a,...b){
+    // console.log(b);
+    let sum1 = 0;
+    for(let i  in b){
+        sum1+=b[i];
+    }
+    // console.log(a);
+    // console.log(sum1);
+
+}
+
+let arr = [20, 14, 56, 78];
+let my = "Ranjeet singh";
+spre(my, ...arr);
+
+
+// Second Example:
+let arr1 = [50,60,70,80];
+let arr2 = [...arr1];
+arr1.push(90);
+
+// console.log(arr1);
+// console.log(arr2);
+
+
+// Thired Example:
+let arr3 = [1,2,3,4,5,6];
+let arr4 = [8,9,8,9,8];
+let marge = [4,4,7,...arr3,...arr4,89,58,74];
+
+// console.log(marge);
+
+
+// Fourth Example:
+let obj1 = {
+    name:"Ranjeet Singh",
+    age:"22"
+}
+
+let obj2 = {
+    female:"Aastha Mishra",
+    old:"23"
+}
+
+let newMarge = {...obj1,...obj2};
+
+// console.log(newMarge)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// Object Literals
+
+let userName = "Ranjeet Mama";
+let userId = "@kings__ranjeet_singh";
+
+let obj = {
+    userName,
+    userId
+};
+
+// console.log(`UserName : ${obj.userName}`)
+// console.log(`UserID : ${obj.userId}`)
+
+
+// Example First:
+ let n = "nameVareable";
+ let m = "age";
+
+ let objj = {
+    [n]:"Ravindra Yadav",
+    [m + "Death"]:24
+ }
+
+//  console.log(objj);
+//  console.log(objj.nameVareable);
+//  console.log(objj.ageDeath);
+
+
+// Example First:
+let num1 = "Babu Bhaiya";
+let num2 = "UK07";
+
+function creatObj(a, b){
+
+    return {a,b};
+}
+// console.log(creatObj(num1,num2))
+let s = creatObj(num1,num2)
+// console.log(s.a + " " + s.b);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Array Destructuring
+
+let user = ["Ranjeet","Bhiwandi",22];
+let [namee,city,agee] = user;
+
+// console.log(namee)
+// console.log(city)
+// console.log(agee)
+
+// First Example:
+function uuser(){
+    return ["Raja","Delhi",2023];
+}
+
+let [name,agge,ccity] = uuser();
+// console.log(ccity)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Object Destructuring
+
+let userD = {
+        named:"Yahoo baba",
+        aged:25,
+        cityd:"Bhiwandi"
+}
+
+let newObjD = {named : n, aged: a, cityd: c} = userD;
+
+// console.log(n);
+// console.log(a);
+// console.log(c);
+
+</script>
