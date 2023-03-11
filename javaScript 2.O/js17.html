@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async & Await Callbacks Promises</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //CallBack
+
+    const empData = [
+       {name:"RanjeetSingh",working:"Frontend Devloper"},
+       {name:"RavindraYadav",working:"Backend Devloper"},
+    ]
+
+    const getData = () => {
+        setTimeout(() => {
+            let bag = "";
+            empData.forEach((e,i) => [
+                bag+=`<li>${e.name} And ${e.working} - ${i}</li>`
+            ])
+            document.write(bag);
+
+        },1000)
+    }
+    
+
+    const creatData = (newData,Callbacks) => {
+        setTimeout(() => {
+            empData.push(newData);
+            // Callbacks();
+        },5000)
+    }
+
+    
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Promise
+
+  const  creatSecondData = (newSecData) => {
+
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            empData.push(newSecData);
+            let error = false;
+            if(!error){
+                resolve()
+            }else{
+                reject("Somthing went Wrong")
+            }
+
+        },4000)
+    })
+  }
+
+//   creatSecondData({name:"PrakshVanture",working:"Full Stack Devloper"}).then(getData)
+//   .catch( error => console.log("Error"));
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Async & Await
+
+async function start(){
+    await creatSecondData({name:"PrakshVanture",working:"Full Stack Devloper"})
+    getData();
+}
+
+start();
+</script>

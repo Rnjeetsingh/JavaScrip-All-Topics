@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API"S and AJAX</title>
+</head>
+<body>
+    <h1>API"S and AJAX</h1>
+</body>
+</html>
+
+<script>
+    // AJAX (Asynchronous, JavaScript, And , XML)
+
+    // XMLHttpRequest
+    // 5 Staps =>  readyStater:
+    // 0.request not initialized
+    // 1.server connection established
+    // 2.request received
+    // 3.processing request
+    // 4.request finished and response is ready
+
+    // http Status code:
+    // 200: "OK"
+    // 403: "Forbidden"
+    // 404: "Not Found"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// API's
+
+// Fetch()
+// 1.Insert
+// 2.Update
+// 3.Read
+// 4.Delete
+
+// // Syntax: fetch(file/URL).then( function (response){
+//     return response.data;
+// }).then(function(result){
+    //   console.log(result)
+// }).catch(function (error){
+//     console.log(error);
+// })
+
+// Fetch() - Insert, Update, Delete : Syntax
+// fetch(file/URL ,{
+//     method:"POST" (post use for data insert from server)
+//     method:"PUT" (put use for update server data)
+//     method:"DELETE" (delete use for delete server data)
+//     method:"GET" (get use for read data and it's default value)
+//     body:data, (Form Data/JSON Data/Text)
+//     header:{
+//          'Content-Type':'application/json'
+
+// }
+// })
+
+// Example => 1
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then((response) => {
+    // return response.json();
+}).then((result) => {
+    result.forEach((e) => {
+        // document.write(`${e.id} .${e.title} </br>`)
+    })
+}).catch((error) => {
+    // console.log("Can't fetch data");
+})
+
+  let obj = {
+        id: 7,
+        title:'Ranjeet',
+        body:'Bhiwandi Bhadwad'
+  }
+
+fetch(`https://jsonplaceholder.typicode.com/posts`,{
+    method:'POST',
+    body:JSON.stringify(obj),
+    headers: {
+         'Content-Type':'application/json',
+    },
+}).then((resp) => {
+    return resp.json();
+}).then((rest) => {
+    console.log(rest)
+}).catch((error) => {
+    console.log("Can't fetch data");
+})
+
+
+
+
+
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP(Object Oriented Programming)</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // OOP 
+
+    class hello{
+       messeg(){
+        // console.log('Hello World');
+       }
+       replay(){
+        // console.log('Hello EveryOne');
+       }
+    }
+
+    let a = new hello();
+   
+    a.messeg();
+    a.replay();
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Typw Of Method:
+
+// 1.Constructor:
+// constructor(){
+//     console.log("hello");
+// }
+
+// 2.Prototype:
+// message(){
+//     console.log("hello");
+// }
+
+// 3.Static:
+// static name(){
+//     console.log("hello");
+// }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// constructor :
+
+class student {
+   constructor(name,age){
+    this.studentName = name;
+    this.studentAge = age;
+   }
+
+   helll(){
+    console.log(`My Name is ${this.studentName} and My Age is ${this.studentAge}`)
+   }
+
+   static staticMethod(){
+    console.log("StaticMethod")
+   }
+}
+
+let st =new  student("Ranjeet",22);
+st.helll();
+student.staticMethod();
+
+</script>

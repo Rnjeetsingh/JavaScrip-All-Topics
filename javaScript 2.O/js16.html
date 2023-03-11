@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest & Spred Opretor</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Rest Operator
+      const res = (a,b,c,...res) => {
+        return (res);
+
+    }
+   const some =  res(2,3,5,8,9,0,7);
+//    console.log(some);
+
+//  In Object
+let students = {
+    name:"Ranjeet",
+    age:22,
+    city:"Bhiwandi"
+};
+
+const {name,...rest} = students;
+// console.log(rest);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Spread Opretor
+    const spr = (n,a,m) => {
+        // console.log(n,a,m);
+
+    }
+
+    let arr = ["Ranjeet", "Sunny", "Ganesh"];
+    let ssp = spr(...arr);
+
+//  In Object
+const st2 = {
+    ...students,
+    age:23
+}
+console.log(st2)
+
+
+
+
+</script>
