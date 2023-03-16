@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 04</title>
+</head>
+<body style="background: rgb(209, 127, 154);">
+    <h1>Class and Object</h1>
+    
+</body>
+</html>
+
+<script>
+    class person{
+        constructor(n,a,g){
+           this.name = n,
+           this.address = a,
+           this.age = g
+        }
+
+        sayHi(){
+            console.log("Hii Everyone");
+        }
+
+        static hello(){
+            console.log("Hello World");
+        }
+        
+    }
+
+    let person1 = new person("Ranjeet","Bhiwandi",22);
+    // console.log(person1);
+    // person1.sayHi();
+    // person.hello();
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Inheritance
+
+class emp {
+    constructor(n){
+       this.name = n
+    }
+    sayHi(){
+        console.log("Hi Emp...")
+    }
+}
+
+class maneger extends emp {
+    constructor(p,d){
+        super(p);
+        this.dipartment = d
+    }
+
+    sayHi(){
+        console.log("Hi Maneger...")
+    }
+
+    info(){
+        this.sayHi();
+        super.sayHi();
+        console.log(this.name + " " + this.dipartment);
+
+    }
+        
+    }
+
+    let mng1 = new maneger("BabuBhaiya","HeraPheri");
+    // console.log(mng1);
+    // mng1.info();
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+
+// Public and Privet Propertes:
+class rocky{
+     #name = "";
+    constructor(n){
+        this.#name = n;
+    }
+
+    #getName(){
+        console.log(this.#name);
+    }
+
+    getMethod(){
+        console.log(this.#getName())
+    }
+}
+
+let res = new rocky("RamuKaka");
+// console.log(res);
+// res.getMethod();
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Mixin:
+
+let useFullMethod = {
+    sayNo(){
+        console.log("No....SayNo...")
+    }
+}
+
+class bahublai{
+    constructor(){
+        this.name = "Prabhas (Bhaubali)"
+    }
+}
+
+Object.assign(bahublai.prototype, useFullMethod);
+
+let all = new bahublai();
+console.log(all);
+all.sayNo();
+
+
+
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 04</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // LocalStorage:
+
+    localStorage.setItem("FirstName","Ranjeet");
+    localStorage.setItem("LastName", "Singh");
+
+   let val =  localStorage.getItem('FirstName');
+//    console.log(val);
+   localStorage.removeItem("LastName")
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// JSON (JavaScript Object Notetion):
+let obj = {
+    name:"Ranjeet",
+    address:"Bhiwnadi",
+    age:22
+}
+
+let data = JSON.stringify(obj);
+// console.log(data);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// JSON Parse:
+let jsonData = `{
+    "namer":"Babubaiya",
+     "age":22,
+     "address":{
+        "city":"Bhiwandi",
+        "p_lang":["c","java","javascript","python"]
+     }
+
+}`
+
+let dObject = JSON.parse(jsonData);
+console.log(dObject['namer']);
+console.log(dObject['address']['city']);
+console.log(dObject['address']['p_lang'][2]);
+
+</script>

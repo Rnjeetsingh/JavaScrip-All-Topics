@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 02</title>
+</head>
+<body style="background: palevioletred;">
+    <h1>Object Orianted Programming</h1>
+</body>
+</html>
+
+<script>
+    // OOP (Object Orianted Programming)
+
+    // Example 1:
+    let person = {
+        firstName: "Prakash",
+        lastName: "Vanture",
+        age:25,
+        aducation: "Masai School",
+        fullName: function (){
+        //    console.log(this.firstName + " " + this.lastName)
+        }
+    };
+    person.fullName();
+    // console.log(person.age,person.aducation);
+  
+    //  Example 2:
+    let person2 = {};
+    person2.name = "Ravindra"
+    person2.sayHi = function(){
+        //    console.log("Hii Ravindra")
+    }
+
+    person2.sayHi();
+    // console.log(person2.name)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Constructor 
+
+function Person(nam1,las1,age1) {
+    this.firstNam = nam1,
+    this.lastNam = las1,
+    this.ageTo = age1
+
+    this.gofun = function(){
+        alert("Hello world")
+    }
+
+    this.chageAge = function(newAge){
+        this.ageTo = newAge;
+    }
+}
+
+let per1 = new Person("Ranjeet","Singh",22);
+let per2 = new Person("Ravindra","Yadav",24);
+per1.chageAge(11);
+per2.chageAge(10);
+
+console.log(per1)
+console.log(per2)
+console.log(per1.gofun())
+
+    
+</script>

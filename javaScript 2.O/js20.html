@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 03</title>
+</head>
+<body style="background: palevioletred;">
+
+    <h1>Prototype and Inheritance</h1>
+    
+</body>
+</html>
+
+<script>
+//  Prototype and Inheritance
+
+function Person(n,l,a){
+    this.name = n,
+    this.last = l,
+    this.age = a
+
+}
+
+Person.prototype.fullName = function(){
+        console.log(this.name + " " + this.last + " " + this.age);
+    }
+
+let person1 = new Person("Babu","Bhaiya",30);
+let person2 = new Person("Raju","HeraPheri",25);
+
+console.log(person1.fullName());
+console.log(person2);
+
+// Example 2:
+
+function Creator(ls){
+    this.lifeSpan = ls
+}
+
+Creator.prototype.breath = function(){
+    console.log("Breathing....");
+}
+
+let cretor1 = new Creator(100);
+console.log(cretor1);
+
+// Connect Person prototype with Creator prototype:
+Person.prototype.__proto__ = Creator.prototype;
+
+console.log(person2.breath());
+
+
+</script>

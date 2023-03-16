@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 01</title>
+</head>
+<body>
+   <h1>ES6-Advance => 01</h1>
+</body>
+</html>
+
+<script>
+//#Default function Parameters
+  function talks(msg="Aastha"){
+    // console.log(msg);
+  }
+  talks();
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//#Rest Parameters
+  function sum(...rest){
+    let total = 0;
+    for(let i in rest){
+        total+=rest[i];
+    }
+    // console.log(total);
+  }
+  sum(2,5,7,8,9,6,3,4,5,6,4,78,4)
+
+ ///////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+//#Spred Oprator
+ let arr1 = [1,2,3];
+ let arr2 = [4,5,6];
+ let arr3 = [...arr1,...arr2];
+
+//  console.log(arr3);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//#for - of - loop
+ let score = "Ranjeet Singh";
+ for(let x of score){
+    // console.log(x);
+ }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+//#Templet Litral
+ let name = "Babu Bhaiya";
+ let age = 22;
+ let city = "Bhiwandi";
+ let temp = `Name:${name}  Age:${age}  City:${city}`;
+//  console.log(temp);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//#Array Destructring
+
+let data = ["Raju","Shyam","BabuBhaiya",[59,45,999]];
+let [name1,name2,name3,[num1,num2,num3],name5='Ranjeet'] = data;
+
+// console.log(num3);
+
+function book(){
+    return ["Jagdishbook","Thane", 1542478957]
+}
+
+let [bookname,address,mobile] = book();
+
+// console.log(mobile);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//#Objet Destructring
+
+let cartoon = {
+    nick:"Ninja Hattori",
+    disny:"Doremon",
+    hungama:"Sinchen",
+    cartoon2 : {
+        ind: "Motu patlu",
+        jap: "Naroto"
+    }
+}
+
+let {nick : sonic,disny,hungama, cartoon2:{ind,jap}, zee="singham"} = cartoon;
+console.log(sonic);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ 
+
+</script>

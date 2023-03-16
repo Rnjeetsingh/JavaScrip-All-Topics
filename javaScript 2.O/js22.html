@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6-Advance => 04</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Callback function :
+
+    function sayHi() {
+        // console.log("Say Hii")
+    }
+
+    function sayHello(a,b,callback){
+        // console.log(a + b);
+        callback();
+    }
+
+    sayHello(7,7,sayHi);
+    sayHello(8,8,() => {
+        // console.log("Byyy....")
+    })
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Map Function : 
+let arr1 = [5,8,9,6,7,8,9];
+
+let newArr = arr1.map((el) => {
+  return  ( el + 2);
+})
+
+// console.log(newArr);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Filter Function :
+let arr2 = [2,3,6,4,7,89,5,4,79,7];
+
+let newArr2 = arr2.filter((el) => {
+    return (el > 5);
+})
+
+// console.log(newArr2);
+
+// Example in Object
+let Obj = [
+    {
+        name:"Ranjeet Singh",
+        position:"Web Devloper"
+    },
+    {
+        name:"Ravindra Yadav",
+        position:"Web Disiner"
+    },
+    {
+        name:"Praksh Vanture",
+        position:"Web Devloper"
+    },
+    {
+        name:"Anurag Rai",
+        position:"App Devloper"
+    },
+    {
+        name:"Ramanuj Gupta",
+        position:"Call Center"
+    }
+    ];
+
+    let webDevloper = Obj.filter((el) => {
+        return (el.position == "Web Devloper")
+    });
+
+    // console.log(webDevloper);
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
+//   Cookies :
+    
+    document.cookie = "Location=India; expires=Sat, 20 Mar 2023 12:00:00 UTC";
+    document.cookie = "Name=RanjeetSingh";
+
+    let x = document.cookie;
+
+    console.log(x);
+
+</script>
